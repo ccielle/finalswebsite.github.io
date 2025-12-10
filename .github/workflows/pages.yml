@@ -1,0 +1,17 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: src   # <-- CHANGE THIS to your folder name
+
+      - uses: actions/deploy-pages@v2
