@@ -37,7 +37,7 @@
   min-height: 250px;
   width: 100%;
   height: auto;
-  background-image: url("/assets/jewelry_pics/Earrings/Earring3/Earring3_2.jpg");
+  background-image: url("/assets/jewelry_pics/Earrings/Earring3/Earring3_2.webp");
   background-size: cover;
   background-position: center;
 }
@@ -74,7 +74,7 @@
 /* ======================== CONTACTS REDIRECT FOOTER ======================== */
 
 .contactFooter {
-  background: url(../assets/Banners\ and\ headers/redirect_banner.png) 50% 50%
+  background: url(../assets/Banners\ and\ headers/redirect_banner.webp) 50% 50%
     no-repeat;
   background-size: cover;
   min-height: 200px;

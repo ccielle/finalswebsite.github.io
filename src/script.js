@@ -104,44 +104,82 @@ createComponents();
 
 class ElementObj {
     element = document.createElement('template');
-    promise;
+    #promise;
     listeners = [];
-    loaded = false;
+    #loaded = false;
 
     constructor(element) {
-        if (isElement(element)) {
-            this.element.replaceWith(element);
-            this.loaded = true;
-        } else if (isPromise(element)) {
-            this.promise = element;
-            element.then((result) => {
-                // console.log(result);
-                this.element.replaceWith(result);
-                this.element = result;
-                // console.log(this.element);
-                this.loaded = true;
-                this.#resetListeners();
-            });
-        }
+      if (typeof element === "string") {
+        this.replaceWith(createElementFromHTML(element));
+      } else if (isElement(element)) {
+        this.replaceWith(element);
+        this.#loaded = true;
+      } else if (isPromise(element)) {
+        this.#promise = element;
+        this.#promise.then((result) => {
+            this.replaceWith(result);
+            this.#loaded = true;
+        });
+      }
     }
 
-    #resetListeners() {
-        this.listeners.forEach(listener => {
-            this.element.addEventListener(listener.event, listener.func);
-        });
+    setInnerHTML(text) {
+      this.element.innerHTML = text;
+    }
+
+    #identifyHTML(object) {
+      if (object instanceof ElementObj) {
+        return object.element;
+      } else if(typeof element === "string") {
+        return createElementFromHTML(element);
+      } else if(isElement(object)) {
+        return object;
+      }
+      return object;
+    }
+
+    querySelector(selector) {
+      return this.element.querySelector(selector);
+    }
+
+    querySelectorAll(selector) {
+      return this.element.querySelectorAll(selector);
+    }
+
+    replaceWith(element) {
+      this.element.replaceWith(this.#identifyHTML(element));
+      this.element = element;
+    }
+
+    appendChild(element) {
+      this.element.appendChild(this.#identifyHTML(element));
+    }
+
+    removeChild(element) {
+      this.element.removeChild(this.#identifyHTML(element));
     }
 
     addEventListener(event, func) {
-        this.listeners.push(
-            {event: event, func: func}
-        );
+      if (this.#loaded) {
         this.element.addEventListener(event, func);
+      } else {
+        this.#promise.then((result) => {
+          result.addEventListener(event, func);
+        });
+      }
+    }
+
+    then(func) {
+      if (this.#loaded) {
+        func(this.element);
+      } else {
+        this.#promise.then(func);
+      }
+      return this;
     }
 
     destroy() {
-        if (this.element) {
-            this.element.remove();
-        }
+      this.element.remove();
     }
 }
 
@@ -153,23 +191,23 @@ class Carousel extends ElementObj {
     isOneImg = false;
 
     constructor(images) {
-        const element = createComponentByName('img_carousel').then((result) => {
-            this.imgContainer = result.querySelector('.carouselImg');
-            this.dotsContainer = result.querySelector('.carouselDots');
-            if (!images) return result;
-            if (images.length < 1) return result;
-            images.forEach(image => {
-                this.pushImage(image);
-            });
-            if (this.imgContainer.children.length <= 1) {
-              this.dotsContainer.remove();
-              this.isOneImg = true;
-            }
-            this.#setActiveIndex(0);
-            result.dataset.index = 0;
-            return result;
-        });
-        super(element);
+      super(
+        createComponentByName('img_carousel').then((result) => {
+          this.imgContainer = result.querySelector('.carouselImg');
+          this.dotsContainer = result.querySelector('.carouselDots');
+          if (!images) return result;
+          if (images.length < 1) return result;
+          images.forEach(image => {
+              this.pushImage(image);
+          });
+          if (this.imgContainer.children.length <= 1) {
+            this.dotsContainer.remove();
+            this.isOneImg = true;
+          }
+          this.#setActiveIndex(0);
+          result.dataset.index = 0;
+          return result;
+        }));
     }
 
     reset() {

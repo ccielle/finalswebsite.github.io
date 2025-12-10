@@ -5,8 +5,7 @@ class GalleryItem extends Carousel {
     description;
 
     constructor(name, description, images) {
-        super(images);
-        this.promise.then((result) => {
+        super(images).then((result) => {
             if (!this.isOneImg) this.#modifyElement(result);
             for (const element of this.imgContainer.children) element.alt = name;
             this.description = description;
@@ -17,8 +16,7 @@ class GalleryItem extends Carousel {
     setElement(object) {
         if (!(object instanceof GalleryItem)) return;
         let element = object.element.cloneNode(true);
-        this.element.replaceWith(element);
-        this.element = element;
+        this.replaceWith(element);
         this.imgContainer = element.querySelector('.carouselImg');
         this.dotsContainer = element.querySelector('.carouselDots');
         const index = Number(element.dataset.index);
@@ -83,7 +81,7 @@ class GalleryHandler {
             return;
         }
         const item = new GalleryItem(name, item_description, image_list);
-        item.promise.then(itemElement => {
+        item.then(itemElement => {
             item.imgContainer.addEventListener('click', (event) => {
                 this.#itemPopUp.setDisplay(item);
                 this.#itemPopUp.enable();
@@ -155,32 +153,34 @@ class GalleryHandler {
         for (let index = 0; index < this.activeItems.length; index++) {
             let currItem = this.activeItems[index];
             if (isObject(currItem)) {
-                createComponentByName('gallery_section').then(result => {
-                    catalogue.appendChild(result);
-                    const subContainer = result.querySelector('.itemContainer');
-                    const title = result.querySelector('.sectionContainer-title p');
-                    title.innerHTML = currItem.section;
-                    for (let index2 = 0; index2 < currItem.items.length; index2++) {
-                        this.#timeoutIDs.push(
-                            setTimeout(() => {
-                                const item = this.items.get(currItem.items[index2]);
-                                item.reset();
-                                subContainer.appendChild(item.element);
-                            }, 50 * index2)
-                        );
-                    }
-                });
+                this.#renderSection(currItem, catalogue, container);
             } else {
-                this.#timeoutIDs.push(
-                    setTimeout(() => {
-                        const item = this.items.get(currItem);
-                        item.reset();
-                        container.appendChild(item.element);
-                    }, 50 * index)
-                );
+                this.#renderCarousel(currItem, container, index);
             }
         }
 
+    }
+
+    #renderSection(currItem, catalogue, container) {
+        createComponentByName('gallery_section').then(result => {
+            catalogue.appendChild(result);
+            const subContainer = result.querySelector('.itemContainer');
+            const title = result.querySelector('.sectionContainer-title p');
+            title.innerHTML = currItem.section;
+            for (let index = 0; index < currItem.items.length; index++) {
+                this.#renderCarousel(currItem.items[index], container, index);
+            }
+        });
+    }
+
+    #renderCarousel(currItem, container, index) {
+        this.#timeoutIDs.push(
+            setTimeout(() => {
+                const item = this.items.get(currItem);
+                item.reset();
+                container.appendChild(item.element);
+            }, 50 * index)
+        );
     }
 
     #filther(category, tags) {
@@ -287,12 +287,6 @@ class FilterPopup extends ElementObj{
             result.addEventListener('click', (event) => {
                 if (event.target.classList.contains("galleryPopup-Background")) {
                     this.disable();
-                    // const x = event.clientX;
-                    // const y = event.clientY;
-                    // setTimeout(() => {
-                    //     const targetElement = document.elementFromPoint(x, y);
-                    //     console.log(targetElement.click());
-                    // }, 250);
                 }
             });
             result.querySelector('.popUpHeader').addEventListener('click', (event) => {
@@ -307,10 +301,8 @@ class FilterPopup extends ElementObj{
         if (bool == this.#state) return;
         if (bool) {
             this.element.dataset.active = true;
-            // this.element.style.transform = "translateX(-100%)";
         } else {
             delete this.element.dataset.active;
-            // this.element.style.transform = "translateX(150%)";
         }
         this.#state = bool;
     }
