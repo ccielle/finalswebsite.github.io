@@ -1,0 +1,222 @@
+[
+  {
+      "id": 1,
+      "name": "Earring1",
+      "category": "Earrings",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Earrings/Earring1/Earring1_1.jpg", "/assets/jewelry_pics/Earrings/Earring1/Earring1_2.jpg", "/assets/jewelry_pics/Earrings/Earring1/Earring1_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 2,
+      "name": "Earring2",
+      "category": "Earrings",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Earrings/Earring2/Earring2_1.jpg", "/assets/jewelry_pics/Earrings/Earring2/Earring2_2.jpg", "/assets/jewelry_pics/Earrings/Earring2/Earring2_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 3,
+      "name": "Earring3",
+      "category": "Earrings",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Earrings/Earring3/Earring3_1.jpg", "/assets/jewelry_pics/Earrings/Earring3/Earring3_2.jpg", "/assets/jewelry_pics/Earrings/Earring3/Earring3_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 4,
+      "name": "Earring4",
+      "category": "Earrings",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Earrings/Earring4/Earring4_1.jpg", "/assets/jewelry_pics/Earrings/Earring4/Earring4_2.jpg", "/assets/jewelry_pics/Earrings/Earring4/Earring4_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 5,
+      "name": "Earring5",
+      "category": "Earrings",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Earrings/Earring5/Earring5_1.jpg", "/assets/jewelry_pics/Earrings/Earring5/Earring5_2.jpg", "/assets/jewelry_pics/Earrings/Earring5/Earring5_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 6,
+      "name": "Earring6",
+      "category": "Earrings",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Earrings/Earring6/Earring6_1.jpg", "/assets/jewelry_pics/Earrings/Earring6/Earring6_2.jpg", "/assets/jewelry_pics/Earrings/Earring6/Earring6_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 7,
+      "name": "Ring1",
+      "category": "Rings",
+      "section": "set ring",
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Rings/Ring1/Ring1_1.jpg", "/assets/jewelry_pics/Rings/Ring1/Ring1_2.jpg", "/assets/jewelry_pics/Rings/Ring1/Ring1_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 8,
+      "name": "Ring2",
+      "category": "Rings",
+      "section": "set ring",
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Rings/Ring2/Ring2_1.jpg", "/assets/jewelry_pics/Rings/Ring2/Ring2_2.jpg", "/assets/jewelry_pics/Rings/Ring2/Ring2_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 9,
+      "name": "Ring3",
+      "category": "Rings",
+      "section": "engagement ring",
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Rings/Ring3/Ring3_1.jpg", "/assets/jewelry_pics/Rings/Ring3/Ring3_2.jpg", "/assets/jewelry_pics/Rings/Ring3/Ring3_3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 10,
+      "name": "Ring4",
+      "category": "Rings",
+      "section": "engagement ring",
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Rings/Ring4/Ring4_1.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 11,
+      "name": "Ring5",
+      "category": "Rings",
+      "section": "wedding ring",
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Rings/Ring5/Ring5_1.jpg"],
+      "material_list": ["white gold", "yellow gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 12,
+      "name": "Ring6",
+      "category": "Rings",
+      "section": "engagement ring",
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Rings/RIng6/Ring6_1.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 13,
+      "name": "Necklace1",
+      "category": "Necklaces",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Necklaces/Necklace1.jpg"],
+      "material_list": ["yellow gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 14,
+      "name": "Necklace2",
+      "category": "Necklaces",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Necklaces/Necklace2.jpg"],
+      "material_list": ["yellow gold"],
+      "stone_list": ["peridot", "opal", "diamond"]
+  },
+  {
+      "id": 15,
+      "name": "Necklace3",
+      "category": "Necklaces",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Necklaces/Necklace3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 16,
+      "name": "Necklace4",
+      "category": "Necklaces",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Necklaces/Necklace4.jpg"],
+      "material_list": ["yellow gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 17,
+      "name": "Necklace5",
+      "category": "Necklaces",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Necklaces/Necklace5.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 18,
+      "name": "Necklace6",
+      "category": "Necklaces",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Necklaces/Necklace6.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 19,
+      "name": "Bracelet1",
+      "category": "Bracelets",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Bracelets/Bracelets1.jpg"],
+      "material_list": ["yellow gold"],
+      "stone_list": ["pearl"]
+  },
+  {
+      "id": 20,
+      "name": "Bracelet2",
+      "category": "Bracelets",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Bracelets/Bracelets2.jpg"],
+      "material_list": ["yellow gold"],
+      "stone_list": []
+  },
+  {
+      "id": 21,
+      "name": "Bracelet3",
+      "category": "Bracelets",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Bracelets/Bracelets3.jpg"],
+      "material_list": ["white gold"],
+      "stone_list": ["diamond"]
+  },
+  {
+      "id": 22,
+      "name": "Bracelet4",
+      "category": "Bracelets",
+      "section": null,
+      "item_description": "Set in 14 or 18 karat gold",
+      "image_list": ["/assets/jewelry_pics/Bracelets/Bracelets4.jpg"],
+      "material_list": ["yellow gold"],
+      "stone_list": []
+  }
+]			

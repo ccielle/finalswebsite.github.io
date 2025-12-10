@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="headerHamburger">
+    <img
+      src="/assets/icons/hamburger.svg"
+      alt="Quick Menu"
+      onclick="setClassActive(findSiblingByQuerySelector(this.parentElement.parentElement, '.navbar-popUpBg'), true)"
+    />
+  </div>
+  <h1 title="home"><a href="index.html">MGR Jewelry</a></h1>
+</header>
+<section class="navbar-popUpBg" onclick="setClassActiveIfTarget(event, this, false)">
+  <nav class="navbar">
+      <div class="sideoption" onclick="setClassActive(this.closest('.navbar-popUpBg'), false)">
+          <img src="/assets/icons/x-close.svg" alt="Close icon" />
+          <h3>Close</h3>
+      </div>
+      <div class="navContainer">
+        <hr>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+        <hr>
+      </div>
+  </nav>
+</section>

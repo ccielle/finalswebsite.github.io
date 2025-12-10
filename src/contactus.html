@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MGR Jewelry | Contact Us</title>
+    <link rel="icon" href="/assets/mainLogo.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="contactUs.css" />
+    <link rel="stylesheet" href="mobile.css" />
+  </head>
+
+  <body>
+    <section>
+      <template class="header component"></template>
+      <div class="Banner">
+        <img
+          src="../assets/Banners and headers/section_header.png"
+          alt="bannerHeader"
+        />
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+    <section class="main-content">
+      <div class="contactUsBody">
+        <h2>
+          <strong>Available for consultations and bookings from:</strong>
+        </h2>
+        <h2 class="daysAvailable">
+          <strong>Monday to Sunday</strong>
+        </h2>
+
+        <div class="contact-wrapper">
+          <div class="contact-box">
+            <div class="icon-label">
+              <img src="../assets/smsLogo.png" alt="SMS Icon" class="icon" />
+              <h3>SMS:</h3>
+            </div>
+            <p>
+              <strong>Globe: 0917 542 5619<br />Smart: 0920 548 4474</strong>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <div class="icon-label">
+              <img
+                src="../assets/viberLogo.png"
+                alt="Viber Icon"
+                class="icon"
+              />
+              <h3>Viber:</h3>
+            </div>
+            <p>
+              <strong>Name: Noel Carrillo<br />Number: 0917 542 5619</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inqSec">
+        <div id="inqForm">
+          <h1>Inquiries</h1>
+          <form>
+              <label for="name">Name</label>
+              <input type="text" name="inqName" id="inqName" placeholder="First Name + Last Name"> <br><br>
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="example@mail.com"> <br><br>
+
+              <label for="msg">Message</label>
+              <textarea for="msg" id="msg" placeholder="Hi! I would like to inquire about..."></textarea> <br><br>
+
+              <span></span>
+              <button type="submit">Submit</button>
+          </form>
+        </div>
+    </section>
+    <section>
+      <template class="footer component"></template>
+    </section>
+    <script src="script.js"></script>
+    <script src="inqForm.js"></script>
+  </body>
+</html>

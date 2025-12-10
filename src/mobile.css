@@ -1,0 +1,32 @@
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+
+  .cardBanner {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+
+  .cardBanner {
+    display: none;
+  }
+
+  .serviceText {
+    font-size: 150%;
+    align-items: center;
+    height: 1rem;
+    padding-inline: 10%;
+  }
+}

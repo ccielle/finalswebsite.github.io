@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Julius Sans One", "Fustat", sans-serif;
+}
+
+body {
+  min-width: 320px;
+  min-height: 490px;
+}
+
+/* ======================== HEADER ======================== */
+
+.header {
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background: white;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header .headerHamburger {
+  padding-inline: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  outline: none;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
+.header .headerHamburger img {
+  height: 70%;
+  width: auto;
+  cursor: pointer;
+}
+
+/* ======================== SIDEBAR ======================== */
+
+.navbar-popUpBg {
+  z-index: 11000;
+  position: fixed;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-popUpBg[data-active] {
+  transform: translateX(150%);
+}
+
+.sideoption {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 0.5em;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.sideoption img {
+  height: 1em;
+  width: auto;
+}
+
+.navContainer {
+  width: 100%;
+  height: fit-content;
+  flex-grow: 1;
+}
+
+.navbar {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #f5f5f5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: fit-content;
+  height: 100%;
+  padding-inline: 2em;
+  filter: drop-shadow(-3px 0px 10px #666);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+  padding-inline: 0.5em;
+  padding-right: 2.5em;
+}
+
+.navbar ul li a {
+  font-family: "Fustat";
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: 0.15s ease-in-out, color 0.5s ease-in-out;
+
+  &:hover {
+    background-color: linear-gradient(
+      to right,
+      rgb(200 200 200 / 40%),
+      rgb(255 255 255 / 0%)
+    );
+    transform: scale(1.08);
+  }
+}
+
+.navContainer hr {
+  border: solid 1px lightgray;
+  width: 100%;
+  margin-block: 1em;
+}
+
+@media only screen and (max-width: 430px) {
+  .navbar-popUpBg {
+    top: -150%;
+    left: unset;
+  }
+
+  .navbar-popUpBg[data-active] {
+    transform: translateY(150%);
+  }
+
+  .navbar {
+    font-size: 1.2em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: min-content;
+  }
+}
+
+
+/* ======================== PAGE BANNER ======================== */
+.Banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.Banner h1 {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+
+  font-size: 2em;
+
+  font-family: "Fustat";
+}
+
+.Banner img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  min-height: 100px;
+}
+
+/* ======================== FOOTER ======================== */
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-top: solid thin black;
+}
+
+.footer p,
+.footer img {
+  font-family: "Fustat";
+  padding-block: 0.5em;
+  margin-inline: 2em;
+}
+
+.footerLogo {
+  height: 100px;
+  width: auto;
+}
+
+@media only screen and (max-width: 550px) {
+  .header {
+    border-bottom: solid thin gray;
+  }
+
+  .footer {
+    padding-block: 0;
+    margin-block: 0;
+  }
+  .footerLogo {
+    height: 8em;
+    width: auto;
+  }
+
+  .footer p,
+  .footer img {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    position: relative;
+  }
+}

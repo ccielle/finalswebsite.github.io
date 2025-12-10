@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Julius Sans One", "Fustat", sans-serif;
+}
+
+/* ======================== SERVICES LIST ======================== */
+.servicesCard {
+  display: flex;
+}
+
+.serviceText {
+  min-height: 250px;
+  display: block;
+  flex-direction: column;
+  height: 1rem;
+  padding-block: 3%;
+  padding-inline: 18.5%;
+  position: auto;
+  flex-wrap: nowrap;
+}
+
+.serviceText p {
+  font-family: "Fustat";
+}
+
+.serviceText li {
+  font-family: "Fustat";
+  position: relative;
+  list-style-position: inside;
+  padding-left: 5%;
+}
+
+.cardBanner {
+  min-height: 250px;
+  width: 100%;
+  height: auto;
+  background-image: url("/assets/jewelry_pics/Earrings/Earring3/Earring3_2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ======================== FAQ SECTION ======================== */
+.questionPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.questionPage h2 {
+  text-align: center;
+  border-bottom: solid thin;
+  border-top: solid thin;
+
+  font-family: "Fustat";
+
+  padding: 1%;
+}
+
+.questionsPanel {
+  text-align: left;
+
+  margin: 4%;
+  margin-block: 1%;
+  padding-inline: 5%;
+}
+
+.questionsPanel p {
+  font-family: "Fustat";
+}
+
+/* ======================== CONTACTS REDIRECT FOOTER ======================== */
+
+.contactFooter {
+  background: url(../assets/Banners\ and\ headers/redirect_banner.png) 50% 50%
+    no-repeat;
+  background-size: cover;
+  min-height: 200px;
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.contactFooter h2 {
+  font-family: "Fustat";
+  text-align: center;
+
+  padding-top: 2%;
+}
+
+.contactFooter a {
+  font-family: "Fustat";
+  margin: auto;
+  padding: 0.5em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+
+  width: 10em;
+  height: auto;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    border: solid thin black;
+    background-color: white;
+    color: black;
+  }
+}
+/* ======================== MOBILE FAQ SECTION ======================== */
+@media only screen and (max-width: 550px) {
+  .servicesCard {
+    max-height: 205px;
+  }
+
+  .serviceText {
+    margin: 1rem;
+    padding: 0;
+  }
+  .serviceText p {
+    font-size: 100%;
+    min-width: 100px;
+    padding-inline: 0;
+    margin-inline: 0;
+  }
+
+  .serviceText li {
+    font-size: 120%;
+  }
+  /* ======================== FAQ SECTION ======================== */
+  .questionsPanel {
+    margin-block: 0.5em;
+    padding-block: 1rem;
+    padding-inline: 1em;
+    background: rgb(200 200 200 / 15%);
+    border-radius: 2px;
+  }
+
+  .questionPage {
+    margin-block: 4em;
+  }
+
+  /* ======================== FAQ CONTACT REDIRECT ======================== */
+  .contactFooter {
+    min-height: 100px;
+    padding: 1em;
+  }
+  .contactFooter a {
+    font-size: 70%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .contactFooter a {
+    font-size: 1.2rem;
+    padding: 1em;
+    padding-inline: 2em;
+  }
+}

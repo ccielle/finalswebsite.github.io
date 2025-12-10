@@ -1,0 +1,239 @@
+/* ======================== HEADER BANNER ======================== */
+.frontBanner {
+  position: relative;
+  display: inline-flex;
+  flex: 1 1 auto;
+  width: 100%;
+  gap: 0;
+}
+
+.frontBanner > h1 {
+  display: none;
+}
+
+.leftSide {
+  display: relative;
+  flex: 1;
+}
+
+.leftSide h1 {
+  position: absolute;
+  z-index: 10;
+
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+
+  height: auto;
+  width: 25rem;
+
+  font-family: "Fustat";
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.frontBanner img,
+.leftSide img {
+  flex: 1 1;
+
+  width: 100%;
+  min-height: 290px;
+  max-height: 300px;
+  min-width: 30em;
+
+  object-fit: cover;
+}
+
+/* ======================== MAIN BODY ======================== */
+.browsePortion {
+  margin: 5em;
+}
+.browsePortion h2 {
+  font-family: "Fustat", sans-serif;
+
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 2em;
+}
+
+.browseSect {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
+  max-width: 700px;
+
+  justify-content: space-around;
+  grid-gap: 1em;
+}
+
+.galleryButton img {
+  display: block;
+  margin: auto;
+  align-items: center;
+  object-fit: cover;
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+}
+
+.galleryButton h3 {
+  text-align: center;
+  padding: 1em;
+}
+
+.galleryButton a {
+  text-decoration: none;
+  color: black;
+}
+
+.galleryButton {
+  display: inline-block;
+  place-items: center center;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.198);
+  }
+}
+
+/* ======================== HOME FOOTER ======================== */
+.homeFooter {
+  background: url(../assets/Banners\ and\ headers/redirect_banner.png) 50% 50%
+    no-repeat;
+  background-size: cover;
+  min-height: 200px;
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.homeFooter h2 {
+  font-family: "Fustat";
+  text-align: center;
+
+  padding-top: 2%;
+}
+
+.homeFooter a {
+  font-family: "Fustat";
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+
+  width: 20em;
+  height: auto;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    border: solid thin black;
+    background-color: white;
+    color: black;
+  }
+}
+/* ======================== MOBILE ======================== */
+@media only screen and (max-width: 800px) {
+  .homeFooter a {
+    font-size: 1.2rem;
+    padding: 1em;
+    padding-inline: 2em;
+  }
+}
+/* ======================== HEADER BANNER ======================== */
+
+@media only screen and (max-width: 760px) {
+  html {
+    font-size: 70%;
+  }
+
+  .frontBanner img,
+  .leftSide img {
+    min-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .frontBanner {
+    display: flex;
+    justify-content: center;
+  }
+  .leftSide {
+    display: none;
+  }
+
+  .frontBanner h1 {
+    display: block;
+    font-family: "Fustat", sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+    background: rgb(250 250 250 / 60%);
+    padding: 2em;
+
+    border-radius: 0px;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+
+    height: auto;
+    width: 12em;
+  }
+  .galleryButton img {
+    height: 7em;
+    width: 7em;
+  }
+
+  .browseSect {
+    margin: 0;
+    padding: 0;
+  }
+
+  .galleryButton {
+    transition: 0.2s;
+    padding: 1rem;
+    &:hover {
+      transform: scale(1);
+      border-radius: 5px;
+      background: linear-gradient(lightgray, rgb(250 250 250 / 10%));
+    }
+  }
+
+  /* ======================== HOME FOOTER ======================== */
+
+  .homeFooter {
+    min-height: 100px;
+  }
+
+  .homeFooter a {
+    font-size: 100%;
+  }
+}
+/* ========================  SELECTOR ======================== */
+/* ========================  PORTRAIT ======================== */
+
+@media only screen and (max-width: 500px) {
+  .browseSect {
+    margin-inline: 0;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    max-width: 100%;
+
+    justify-content: space-around;
+    grid-gap: 0;
+  }
+
+  .galleryButton h3 {
+    padding-inline: 0;
+    width: 100%;
+  }
+}

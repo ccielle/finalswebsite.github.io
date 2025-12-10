@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Demo</title>
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <h1>Gallery</h1>
+
+    <form>
+      <h3>Categories</h3>
+      <input
+        type="radio"
+        id="all"
+        name="category"
+        value="all"
+        onclick="setCat('All')"
+      />
+      <label for="all">All</label><br />
+
+      <input
+        type="radio"
+        id="necklace"
+        name="category"
+        value="necklace"
+        onclick="setCat('Necklaces')"
+      />
+      <label for="necklace">Necklace</label><br />
+
+      <input
+        type="radio"
+        id="earrings"
+        name="category"
+        value="earrings"
+        onclick="setCat('Earrings')"
+      />
+      <label for="earrings">Earrings</label><br />
+
+      <input
+        type="radio"
+        id="bracelets"
+        name="category"
+        value="bracelets"
+        onclick="setCat('Bracelets')"
+      />
+      <label for="bracelets">Bracelets</label>
+
+      <input
+        type="radio"
+        id="rings"
+        name="category"
+        value="rings"
+        onclick="setCat('Rings')"
+      />
+      <label for="rings">Rings</label>
+    </form>
+    <!-- <br> -->
+    <form>
+      <h3>Tags</h3>
+
+      <h5>Material</h5>
+      <input
+        type="checkbox"
+        id="whiteGold"
+        name="whiteGold"
+        value="whiteGold"
+        onchange="setTag('white gold', event)"
+      />
+      <label for="whiteGold">White Gold</label><br />
+      <input
+        type="checkbox"
+        id="yellowGold"
+        name="yellowGold"
+        value="yellowGold"
+        onchange="setTag('yellow gold', event)"
+      />
+      <label for="yellowGold">Yellow Gold</label><br />
+
+      <h5>Stone</h5>
+      <input
+        type="checkbox"
+        id="diamond"
+        name="diamond"
+        value="diamond"
+        onchange="setTag('diamond', event)"
+      />
+      <label for="diamond">Diamond</label><br />
+      <input
+        type="checkbox"
+        id="opal"
+        name="opal"
+        value="opal"
+        onchange="setTag('opal', event)"
+      />
+      <label for="opal">Opal</label><br />
+    </form>
+
+    <br /><br />
+    <h3>Items</h3>
+
+    <div class="itemContainer">
+      <!-- <div class="item">
+            <div class="carouselImg">
+                <img src="/assets/jewelry_pictures/Bracelets/Bracelet_1.jpeg" alt="">
+                <img src="/assets/jewelry_pictures/Bracelets/Bracelet_2.jpeg" alt="">
+                <img src="/assets/jewelry_pictures/Bracelets/Bracelet_3.jpeg" alt="">
+            </div>
+
+            <div class="carouselDots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="carouselPrevBtn">Prev</button>
+            <button class="carouselNextBtn">Next</button>
+        </div>
+
+        <div class="item">
+            <div class="carouselImg">
+                <img src="/assets/jewelry_pictures/earrings/Earring 3/" alt="">
+                <img src="/assets/jewelry_pictures/Bracelets/Bracelet_2.jpeg" alt="">
+                <img src="/assets/jewelry_pictures/Bracelets/Bracelet_3.jpeg" alt="">
+            </div>
+
+            <div class="carouselDots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="carouselPrevBtn">Prev</button>
+            <button class="carouselNextBtn">Next</button>
+        </div> -->
+    </div>
+
+    <br /><br />
+    <h1>END</h1>
+    <script src="../script.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+  <!-- insane work -->
+</html>
