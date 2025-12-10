@@ -1,5 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
+@font-face {
+  font-family: Julius Sans One;
+  src: url(../fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Fustat;
+  src: url(../fonts/Fustat/Fustat-VariableFont_wght.ttf);
+}
 
 * {
   margin: 0;
@@ -162,7 +169,6 @@ body {
     height: min-content;
   }
 }
-
 
 /* ======================== PAGE BANNER ======================== */
 .Banner {

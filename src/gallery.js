@@ -153,7 +153,7 @@ class GalleryHandler {
         for (let index = 0; index < this.activeItems.length; index++) {
             let currItem = this.activeItems[index];
             if (isObject(currItem)) {
-                this.#renderSection(currItem, catalogue, container);
+                this.#renderSection(currItem, catalogue);
             } else {
                 this.#renderCarousel(currItem, container, index);
             }
@@ -161,10 +161,10 @@ class GalleryHandler {
 
     }
 
-    #renderSection(currItem, catalogue, container) {
+    #renderSection(currItem, catalogue) {
         createComponentByName('gallery_section').then(result => {
             catalogue.appendChild(result);
-            const subContainer = result.querySelector('.itemContainer');
+            const container = result.querySelector('.itemContainer');
             const title = result.querySelector('.sectionContainer-title p');
             title.innerHTML = currItem.section;
             for (let index = 0; index < currItem.items.length; index++) {
@@ -333,6 +333,9 @@ class ItemPopup extends ElementObj{
             this.#itemCarouselObj = new GalleryItem(null, null, null);
             this.#itemCarousel.replaceWith(this.#itemCarouselObj.element);
             this.#itemCarousel = this.#itemCarouselObj.element;
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') this.disable();
+            });
             return result;
         });
         super(element);
