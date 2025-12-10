@@ -1,17 +1,35 @@
-name: Deploy site
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  pages: write
+  contents: read
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/upload-pages-artifact@v2
+      # This uploads your folder as the Pages artifact
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: src   # <-- CHANGE THIS to your folder name
+          path: src   # <-- CHANGE THIS to your folder containing index.html
 
-      - uses: actions/deploy-pages@v2
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
