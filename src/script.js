@@ -204,7 +204,7 @@ class Carousel extends ElementObj {
             this.dotsContainer.remove();
             this.isOneImg = true;
           }
-          this.#setActiveIndex(0);
+          this.setActiveIndex(0);
           result.dataset.index = 0;
           return result;
         }));
@@ -212,23 +212,24 @@ class Carousel extends ElementObj {
 
     reset() {
       try {
-        this.#setActiveIndex(0);
+        this.setActiveIndex(0);
       } catch (error) {
         
       }
     }
 
     pushImage(image) {
+        const dotElement = document.createElement('span');        
         if (checkIfElementIsTag(image, 'img')) {
             this.imgContainer.appendChild(image);
-            this.dotsContainer.appendChild(document.createElement('span'));
+            this.dotsContainer.appendChild(dotElement);
             return image;
         } else {
             const imgElement = document.createElement('img');
             imgElement.src = image;
             imgElement.alt = "undefined";
             this.imgContainer.appendChild(imgElement);
-            this.dotsContainer.appendChild(document.createElement('span'));
+            this.dotsContainer.appendChild(dotElement);
             return imgElement;
         }
     }
@@ -242,7 +243,7 @@ class Carousel extends ElementObj {
         }
     }
 
-    #setActiveIndex(index) {
+    setActiveIndex(index) {
         let newIndex = index;
         const images = this.imgContainer.children;
         if (newIndex > (images.length - 1)) {
@@ -264,12 +265,12 @@ class Carousel extends ElementObj {
 
     next() {
         if (this.imgContainer.children.length <= 1) return;
-        this.#setActiveIndex(this.currentIndex + 1);
+        this.setActiveIndex(this.currentIndex + 1);
     }
 
     previous() {
         if (this.imgContainer.children.length <= 1) return;
-        this.#setActiveIndex(this.currentIndex - 1);
+        this.setActiveIndex(this.currentIndex - 1);
     }
 }
 

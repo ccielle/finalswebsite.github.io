@@ -27,6 +27,13 @@ class GalleryItem extends Carousel {
     }
 
     #modifyElement(element) {
+        const dots = this.dotsContainer.children;
+        for (let index = 0; index < dots.length; index++) {
+            dots[index].addEventListener('click', (event) => {
+                this.setActiveIndex(index);
+            });        
+        }
+
         let prevBtn = element.querySelector('.carouselPrevBtn');
         if (!prevBtn) {
             prevBtn = createElementFromHTML(
